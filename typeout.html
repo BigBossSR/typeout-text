@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typeout Your Text!</title>
+	<link rel="stylesheet" type="text/css" href="typeout.css">
+</head>
+<body>
+
+<div class="container">
+		<aside id="readout">
+			This is the starting text.
+		</aside>
+
+		<input type="text" id="single-txt" placeholder="Type out a single statement." />
+		<button id="single-btn">Type It!</button>
+	
+		<input type="text" id="scroll-txt" placeholder="Type out a series of scrolling statements." />
+		<button class="scrolling" id="scroll-btn">Type It!</button>	
+</div>
+
+
+
+
+<script type="text/javascript" src="typeout.js"></script>
+<script type="text/javascript">
+	var target = new Typee("#readout")
+	target.typeOut(" You should see this text incrementally typing.")
+
+	var singleButton = document.getElementById("single-btn")
+	singleButton.onclick = function() {
+		var input = document.getElementById("single-txt").value
+		target.singleLine(input)
+	}
+
+	var scrollButton = document.getElementById("scroll-btn")
+	scrollButton.onclick = function() {
+		var input = document.getElementById("scroll-txt").value
+		target.scrollingText(input)
+	}
+</script>
+
+</body>
+</html>

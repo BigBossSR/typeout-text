@@ -1,0 +1,29 @@
+
+
+.container {
+	margin: 10% 20%;
+	width: 60%;	
+}
+
+#readout {
+	overflow: scroll;
+	height: 100px;
+	width: 400px;
+	border: solid 1px blue;
+	transition: all .1s;
+	font-size: 1.1rem;
+	margin: 10% auto;
+}
+
+input {
+	width: 78%;
+	height: 2rem;
+	display: inline-block;
+}
+
+button {
+	height: 2rem;
+	width: 19%;
+	text-align: center;
+	display: inline-block;
+}
